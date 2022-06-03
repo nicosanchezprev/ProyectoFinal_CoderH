@@ -38,35 +38,6 @@ ul {
 }
 /* Fin de generales */
 
-/* MENU PRINCIPAL */
-.link {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    margin: 30px;
-}
-.menu--ul1 {
-    list-style:none;
-    font-size: 0;
-}
-.menu__rayas {
-    display: inline-block;
-    width: 25%;
-    position:relative;
-    font-size: 14px;
-}
-.menu--ul2 {
-    position: absolute;
-    display: none;
-}
-.menu__link {
-    font-size: 20px;
-    display: block;
-}
-ul li:hover ul {
-    display: block;
-}
-/* FIN DE MENU PRINCIPAL */
 
 /* SUBTITULOS*/
 .subtitulo-nosotros, .subtitulo-productos, .subtitulo-terminos, .subtitulo-contacto {
@@ -150,7 +121,7 @@ ul li:hover ul {
             "main"
             "footer";
         grid-template-columns: auto;
-        grid-template-rows: auto 15px auto auto;
+        grid-template-rows: auto 110px auto auto;
     }
     /* FIN GRID GENERAL */
     #logo {
@@ -165,8 +136,32 @@ ul li:hover ul {
         text-align: center;
     }
     #rayas {
-        font-size: 20px;
+        display: none;
     }
+    /* MENU PRINCIPAL */
+    .link {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        margin: 30px;
+    }
+    .menu--ul1 {
+        list-style:none;
+        font-size: 0;
+    }
+    .menu__rayas {
+        display: inline-block;
+        width: 25%;
+        position:relative;
+        font-size: 14px;
+    }
+    .menu__link {
+        font-size: 20px;
+        display: block;
+    }
+    
+    /* FIN DE MENU PRINCIPAL*/
+
     /* FOOTER */
     #vidMuestra {
         position: relative;
@@ -431,7 +426,7 @@ ul li:hover ul {
 @media screen and (min-width: 1200px) {
     /* GRID GENERAL */
     #body-ini, #body-nos, #body-prod, #body-term, #body-cont {
-       /* background-image: linear-gradient(#fce4dc, white); */
+        background-image: linear-gradient(#faebe6, white);
         grid-template-areas: 
             "nav header header"
             "nav main main"
@@ -443,31 +438,62 @@ ul li:hover ul {
     #logo {
         width: 150px;
         height: 80px;
-      /*  grid-area: logo;
-        justify-self: end; */
+        grid-area: logo;
+        justify-self: end;
     }
     #tituloPrincipal {
         color: #E64A19;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 50px;
         font-weight: 800;
-      /*  grid-area: titulo;
-        justify-self: center; */
+        grid-area: titulo;
+        justify-self: center; 
         
     }
     #rayas {
         font-size: 30px;
+        display: block;
     }
     /* HEADER */
     
-   /* header{
+    header{
         display: grid;
         grid-template-columns: 15% auto 15%;
         grid-template-rows: auto;
         grid-template-areas: ". titulo logo";
-    } */
+    }
 
     /* HEADER */
+
+    /* MENU PRINCIPAL */
+    .link {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        margin: 30px;
+    }
+    .menu--ul1 {
+        list-style:none;
+        font-size: 0;
+    }
+    .menu__rayas {
+        display: inline-block;
+        width: 25%;
+        position:relative;
+        font-size: 14px;
+    }
+    .menu--ul2 {
+        position: absolute;
+        display: none;
+    }
+    .menu__link {
+        font-size: 20px;
+            display: block;
+    }
+    ul li:hover ul {
+        display: block;
+    }
+
     /* FOOTER */
     #vidMuestra {
         position: relative;
@@ -493,6 +519,11 @@ ul li:hover ul {
         border-style: outset;
         padding-left: 5px;
         padding-right: 5px;
+        transition: all 0.5s;
+    }
+    .footer__trabajo--text:hover {
+        font-size: 20px;
+        color: white;
     }
     .redes {
         color: #FF5722;
@@ -575,6 +606,11 @@ ul li:hover ul {
         width: 200px;
         height: 200px;
         margin: 20px 20px 20px 20px;
+        transition: all 0.5s;
+    }
+    .img-nos:hover{
+        width: 250px;
+        margin: 0px 0px 0px 0px;
     }
     /* FIN DE NOSOTROS */
 
@@ -589,6 +625,12 @@ ul li:hover ul {
         width: 120px;
         height: 120px;
         margin: 20px 20px 0px 20px;
+        transition: all 0.5s;
+    }
+    .item__img:hover{
+        width: 130px;
+        height: 130px;
+        margin: 20px 0px 0px 0px;
     }
     .button_prod{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -600,8 +642,14 @@ ul li:hover ul {
         border: 1px solid #fdd9cd;
         background-color: #fdd9cd;
         color: black;
+        transition: all 0.3s;    
     }
-    
+    .button_prod:hover{
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+        padding: 10px;
+    }
     .item {
         background-color: #e64a19;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -672,24 +720,43 @@ ul li:hover ul {
         border-radius: 10px;
         margin-bottom: 20px;
         padding: 10px;
+        transition: all 0.5s;
+    }
+    .formulario__datos:hover{
+        padding-left: 12px;
+        padding-right: 12px;
     }
     #cont-button{
         height: 30px;
         width: 60px;
         background-color: #fdd9cd;
         border: solid 1px #fdd9cd;
-        border-radius: 15px;
+        border-radius: 10px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 650;
         text-align: center;
+        transition: all 0.2s;
+    }
+    #cont-button:hover{
+        background-color: black;
+        border: solid 1px black;
+        color: white;
+        height: 35px;
+        width: 65px;
     }
     #consult{
-        height: 90px; 
+        height: 70px; 
         width: 450px;
         background-color: #fdd9cd;
         border: solid 1px #fdd9cd;
         border-radius: 10px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 4px;
+        transition: all 0.5s;
+    }
+    #consult:focus{
+        background-color: black;
+        color:white
     }
     #correo{
         height: 20px; 
@@ -698,6 +765,12 @@ ul li:hover ul {
         border: solid 1px #fdd9cd;
         border-radius: 10px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: all 0.5s;
+        padding: 4px;
+    }
+    #correo:focus{
+        background-color: black;
+        color:white
     }
     #name{
         height: 20px; 
@@ -706,6 +779,12 @@ ul li:hover ul {
         border: solid 1px #fdd9cd;
         border-radius: 10px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 4px;
+        transition: all 0.5s;
+    }
+    #name:focus{
+        background-color: black;
+        color:white
     }
     #motiv{
         height: 20px; 
