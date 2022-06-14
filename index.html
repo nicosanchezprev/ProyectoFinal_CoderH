@@ -13,46 +13,73 @@
 </head>
 <body id="body-ini">
     <header>
-       <a href="./index.html" class="logo"><img src="./assets/image/Captura de pantalla 2022-05-09 184122.png" class="logo"></a>
-        <h1 id="tituloPrincipal">HZ Construcciones</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-xl-2">
+                    <nav>
+                        <ul class="menu--ul2">
+                            <li class="menu__link"><a href="./pages/nosotros.html" class="link">Nosotros</a></li>
+                            <li class="menu__link"><a href="./pages/productos.html" class="link">Productos</a></li>
+                            <li class="menu__link"><a href="./pages/terminos.html" class="link">Terminos</a></li>
+                            <li class="menu__link"><a href="./pages/contacto.html" class="link">Contacto</a></li>
+                        </ul>
+                        <!--<li class="menu__rayas">
+                            <a id="rayas"><ion-icon name="menu" size="large"></ion-icon></a>
+                        </li> -->
+                    </nav>
+                </div>
+                
+                <div class="col-sm-9 col-md-8 col-xl-8">
+                    <a href="./index.html" class="tituloPrincipal"><h1 class="tituloPrincipal">HZ Construcciones</h1></a>
+                </div>
+                
+                <div class="col-sm-2 col-md-3 col-xl-2">  
+                    <a href="./index.html" class="logo"><img src="./assets/image/Captura de pantalla 2022-05-09 184122.png" class="logo"></a>
+                </div>
+            </div>
+        </div>        
     </header>
-    <nav>
-        <ul class="menu--ul1">    
-            <li class="menu__rayas"><a id="rayas"><ion-icon name="menu" size="large"></ion-icon></a>
-                <ul class="menu--ul2">
-                    <li class="menu__link"><a href="./pages/nosotros.html" class="link">Nosotros</a></li>
-                    <li class="menu__link"><a href="./pages/productos.html" class="link">Productos</a></li>
-                    <li class="menu__link"><a href="./pages/terminos.html" class="link">Terminos</a></li>
-                    <li class="menu__link"><a href="./pages/contacto.html" class="link">Contacto</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
     <main id="main-inicio">
-        <img src="./assets/image/01.MujeresConstrccion.jpg"  class="img-inicio1" class="foto-ini"/>
-        <img src="./assets/image/personal-en-una-obra-01.jpg" class="img-inicio2" class="foto-ini"/>
-        <img src="./assets/image/albañil.jpg" class="img-inicio3" class="foto-ini"/>     
-        <video id="vid-inicio" autoplay muted>
-            <source src="./assets/video/Work - 40813.mp4" type="video/mp4"/>Tu navegador no es compatible con videos html5
-        </video>
+        <div class="container-fluid">
+            <div class="row">
+                <img src="./assets/image/01.MujeresConstrccion.jpg"  class="img-inicio1" class="foto-ini"/>
+                <img src="./assets/image/personal-en-una-obra-01.jpg" class="img-inicio2" class="foto-ini"/>
+                <img src="./assets/image/albañil.jpg" class="img-inicio3" class="foto-ini"/>
+            </div>     
+            <div class="row">
+                <video id="vid-inicio" autoplay muted>
+                    <source src="./assets/video/Work - 40813.mp4" type="video/mp4"/>Tu navegador no es compatible con videos html5
+                </video>
+            </div>
+        </div>
     </main>
     <footer>
-        <div class="proyectoAbajo-div">
-            <h3 class="proyectoAbajo">Mira uno de nuestros ultimos proyectos!</h3>
-                <nav class="proyectoAbajo">
-                    <iframe src="https://www.youtube.com/embed/IwPrCVlFRhg" id="vidMuestra" title="YouTube video player"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="container-fluid">
+            <div class="row">  <!-- class="proyectoAbajo-div" para el color gris -->
+                <h3 class="proyectoAbajo">Mira uno de nuestros ultimos proyectos!</h3>
+            </div>
+            <div class="row"> <!-- class="proyectoAbajo-div" para el color gris -->
+                    <nav class="proyectoAbajo">
+                        <iframe src="https://www.youtube.com/embed/IwPrCVlFRhg" id="vidMuestra" title="YouTube video player"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </nav> 
+            </div>
+            <div class="row">
+                <nav>  
+                    <ul>
+                        <li class="footer__trabajo"><a href="./pages/contacto.html" class="footer__trabajo--text">TRABAJA CON NOSOTROS</a></li>
+                    </ul>
                 </nav>
-        </div>
-            <nav>  
-                <ul>
-                    <li class="footer__trabajo"><a href="./pages/contacto.html" class="footer__trabajo--text">TRABAJA CON NOSOTROS</a></li>
-                </ul>
-            </nav>
+            </div>
+            <div class="row">
                 <h3 class="redes">Nuestras redes</h3>
-                    <h4 class="redes2">
-                        <img src="./assets/image/instagram.png" id="ig" alt="logo intagram" > @hz.construcciones 
-                        <img src="./assets/image/facebook.png" alt="logo facebook" id="facebook"> /construccioneshz.corralon
-                    </h4>
+            </div>
+            <div class="row">
+                <h4 class="redes2">
+                    <img src="./assets/image/instagram.png" id="ig" alt="logo intagram" > @hz.construcciones 
+                    <img src="./assets/image/facebook.png" alt="logo facebook" id="facebook"> /construccioneshz.corralon
+                </h4>
+            </div>
+        </div>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
