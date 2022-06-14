@@ -13,7 +13,7 @@
 </head>
 <body id="body-cont">
     <header id="header-cont">
-        <img src="../assets/image/Captura de pantalla 2022-05-09 184122.png" id="logo">
+        <a href="../index.html" class="logo"><img src="../assets/image/Captura de pantalla 2022-05-09 184122.png" class="logo"></a>
         <h1 id="tituloPrincipal">HZ Construcciones</h1>
     </header>
     <nav id="nav-cont">
@@ -30,64 +30,62 @@
     </nav>
     <main>
         <h2 class="subtitulo-contacto">CONTACTO</h2>
-        <article class="cont-layout"> 
-            <img src="../assets/image/Constructor-PNG-HD-Quality.png" type="image.png" class="img-contacto1">
+            <article class="cont-layout"> 
+                <img src="../assets/image/Constructor-PNG-HD-Quality.png" type="image.png" class="img-contacto1">
             
                 <form  action="#" method="GET" enctype="multipart/form-data">
                     <fieldset class="formulario__datos">
+                        
                         <h5>INFORMACION PERSONAL</h5>
-                        <br>
-                        <label for="motivo">Motivo:</label>
                         
-                        <select id="motiv" name="motivo">
-                            <option value="consulta">Consulta</option>
-                            <option value="presupuesto">Presupuesto</option>
-                            <option value="postulacion">Postulacion</option>
-                        </select>
-
-                        <br>
-                        <br>
-
-                        <label for="nombre">Nombre y Apellido:</label>
-                        <input id="name" name="nombre" type="text" placeholder="  Nombre y Apellido"/>
+                        <div class="div-cont">
+                            <label for="motivo">Motivo:</label>
+                            <select id="motiv" name="motivo">
+                                <option value="consulta">Consulta</option>
+                                <option value="presupuesto">Presupuesto</option>
+                                <option value="postulacion">Postulacion</option>
+                            </select>
+                        </div>  
                         
-                        <br>
-                        <br>
+                        <div class="div-cont"> 
+                            <label for="nombre">Nombre y Apellido:</label>
+                                <input id="name" name="nombre" type="text" placeholder="  Nombre y Apellido"/>
+                        </div>
                         
-                        <label for="sexo">Sexo:</label>
-                        <input name="sexo" type="radio" value="hombre"/>
-                        <span>Hombre</span>
-                        <input name="sexo" type="radio" value="mujer"/>
-                        <span>Mujer</span>
-                        <input name="sexo" type="radio" value="otro"/>
-                        <span>Otro</span>
+                        <div class="div-cont">
+                            <label for="sexo">Sexo:</label>
+                                <input name="sexo" type="radio" value="hombre"/>
+                            <span>Hombre</span>
+                                <input name="sexo" type="radio" value="mujer"/>
+                            <span>Mujer</span>
+                                <input name="sexo" type="radio" value="otro"/>
+                            <span>Otro</span>
+                        </div>
                         
-                        <br>
-                        <br>
-                       
-                        <label for="email">Correo electronico:</label>
-                        <input id="correo" name="email" type="text" placeholder="  ejemplo@email.com"/>
+                        <div class="div-cont">
+                            <label for="email">Correo electronico:</label>
+                                <input id="correo" name="email" type="text" placeholder="  ejemplo@email.com"/>
+                        </div>
                         
+                        <div class="div-cont">
+                            <label for="consulta">Consulta:</label>
+                            <textarea id="consult"></textarea>
+                        </div>
                         
-                        <br>
-                        <br>
-                    
-                        <label for="consulta">Consulta:</label>
-                        <br>
-                        <textarea id="consult"></textarea>
-                        <br>
-                        <br>
                         <button id="cont-button">Enviar</button>
+
                     </fieldset>
                 </form>
-        </article>
+            </article>
     </main>
     <footer>
-        <h3 class="proyectoAbajo">Mira uno de nuestros ultimos proyectos!</h3>
-        <nav class="proyectoAbajo">
-        <iframe src="https://www.youtube.com/embed/IwPrCVlFRhg" id="vidMuestra"title="YouTube video player"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </nav>
-        <h3 class="redes">Nuestras redes</h3>
+        <div class="proyectoAbajo-div">
+            <h3 class="proyectoAbajo">Mira uno de nuestros ultimos proyectos!</h3>
+                <nav class="proyectoAbajo">
+                    <iframe src="https://www.youtube.com/embed/IwPrCVlFRhg" id="vidMuestra"title="YouTube video player"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </nav>
+        </div>
+            <h3 class="redes">Nuestras redes</h3>
             <h4 class="redes2"><img src="../assets/image/instagram.png" id="ig" alt="logo intagram" > @hz.construcciones <img src="../assets/image/facebook.png" alt="logo facebook" id="facebook"> /construccioneshz.corralon</h4>
     </footer>
 
