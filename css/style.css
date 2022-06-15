@@ -2,28 +2,10 @@
     margin: 0;
     padding: 0;
 }
-
-#body-ini, #body-nos, #body-term, #body-cont, #body-prod {
-    display: grid;
-}
-/* GRID AREA*/
-nav{
-    grid-area: nav;
-}
-main{
-    grid-area: main;
-}
-footer {
-    background-color: black;
-    grid-area: footer;
-}
-header {
-    border-bottom: outset grey 2px;
-    grid-area: header;
-}
-/* FIN GRID AREA*/
-
 /* Generales */
+footer {
+    background-image: linear-gradient(rgb(59, 59, 59), rgb(17, 17, 17) ,#000000);
+}
 p {
     color: black;
     font-size: 12px;
@@ -36,50 +18,23 @@ ul {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
     font-weight: normal;
 }
+#nav-bar{
+    background-color: #f3663b;
+}
 /* Fin de generales */
-
 
 /* SUBTITULOS*/
 .subtitulo-nosotros, .subtitulo-productos, .subtitulo-terminos, .subtitulo-contacto {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    margin-top: 80px;
 }
 /* FIN DE SUBTITULOS*/
-
-/* INICIO */
-#rayas {
-    font-size: 30px;
-}
-#main-inicio {
-    display: grid;
-}
-.img-inicio1{
-    grid-area: img-1;
-}
-    .img-inicio2{
-        grid-area: img-2;
-    }   
-        .img-inicio3{
-            grid-area: img-3;
-        }
-            #vid-inicio{
-                grid-area: vid;
-            }
-/* FIN DE INICIO */
-
-/* NOSOTROS */
-.nos-layout{
-    display: flex;
-}
-
-/* FIN DE NOSOTROS */
-
 
 /* PRODUCTOS */
 .material{
     display: grid;
 }
-
 /* FIN DE PRODUCTOS */
 
 /* TERMINOS */
@@ -109,222 +64,198 @@ ul {
 }
 /* FIN CONTACTO */
 
-/* Vista Mobile */
 
+
+
+
+
+
+
+
+
+
+/* VISTA MOBILE EXTRA SMALL */
 @media screen and (min-width: 320px) {
-    /* GRID GENERAL */
     #body-ini, #body-nos, #body-prod, #body-term, #body-cont {
-        background-color: #f3f3f3;
-        grid-template-areas: 
-            "header"
-            "nav"
-            "main"
-            "footer";
-        grid-template-columns: auto;
-        grid-template-rows: auto 110px auto auto;
+        background-image: linear-gradient(#faebe6, rgb(235, 137, 57));
     }
-    /* FIN GRID GENERAL */
-    #logo {
-        width: 100px;
-        height: 60px;
+    .logo {
+        width: 70px;
     }
-    #tituloPrincipal {
-        color: #E64A19;
+    #fondo-color1, #fondo-color2{
+        background-color: #fdd9cd;
+    }
+    .nav-link{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 40px;
-        font-weight: 800;
-        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
     }
-    #rayas {
-        display: none;
-    }
-    /* MENU PRINCIPAL */
-    .link {
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        margin: 30px;
-    }
-    .menu--ul1 {
-        list-style:none;
-        font-size: 0;
-    }
-    .menu__rayas {
-        display: inline-block;
-        width: 25%;
-        position:relative;
-        font-size: 14px;
-    }
-    .menu__link {
-        font-size: 20px;
-        display: block;
-    }
-    
-    /* FIN DE MENU PRINCIPAL*/
-
     /* FOOTER */
     #vidMuestra {
-        position: relative;
-        left: 15px;
-        width: 220px;
-        height: 120px;
+        width: 250px;
+        height: 140px;
+        margin-bottom: 10px;
     }
-    .proyectoAbajo {
-        color: white;
+    .proyectoAbajo-div{
         background-color: rgb(80, 80, 80);
+    }
+    #proyectoAbajo1{
+        color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 16px;
     }
     .footer__trabajo {
         text-align: center;
-        margin-top: 10px;
-        margin-bottom: 6px;
+        list-style: none;
     }
     .footer__trabajo--text {
         color: #FF5722;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: bold;
         text-decoration: none;
         border-style: outset;
         padding-left: 5px;
         padding-right: 5px;
+        transition: all 0.5s;
+    }
+    .footer__trabajo--text:hover {
+        font-size: 18px;
+        color: white;
     }
     .redes {
         color: #FF5722;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         text-align: right;
-        line-height: 25px;
     }
     .redes2 {
         color: #FF5722;
         text-align: right;
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 14px;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     #ig {
-        width: 16px;
-        height: 16px;
+        width: 30px;
+        height: 30px;
     }
     #facebook {
-        width: 16px;
-        height: 16px;
+        width: 30px;
+        height: 30px;
     }
     /* FIN DE FOOTER */
-    
+
     /* INICIO */
-    #main-inicio {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto;
-        justify-content: space-around;
-        grid-template-areas: 
-            "img-1"
-            "img-2"
-            "img-3"
-            "vid";
-    }
     .img-inicio1{
-        width: 250px;
-        height: 250px;
-        border-radius: 10px;
-        margin-top: 25px;
+        width: 200px;
+        height: 200px;
+        margin: 80px 0px 0px 0px;
+        border-radius: 15px;
     }
         .img-inicio2{
-            width: 250px;
-            height: 250px;
-            border-radius: 10px;
-            margin-top: 25px;
+            width: 200px;
+            height: 200px;
+            margin: 80px 0px 0px 0px;
+            border-radius: 15px;
         }   
             .img-inicio3{
-                width: 250px;
-                height: 250px;
-                border-radius: 10px;
-                margin-top: 25px;
+                width: 200px;
+                height: 200px;
+                margin: 10px 0px 0px 0px;
+                border-radius: 15px;
             }
                 #vid-inicio{
-                    width: 250px;
-                    height: 200px;
+                    width: 450px;
+                    height: 250px;
+                    margin: 10px 0px 10px 0px;
                 }
-    .foto-ini{
-        width: 250px;
-        height: 250px;;
-        border-radius: 10px;
-    }
     /* FIN DE INICIO */
 
     /* NOSOTROS */
     .nos-layout{
-        flex-wrap: wrap;
-        flex-flow: row;
-        justify-content: space-evenly;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     .parraf-nos{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
+        font-size: 18px;
+        font-weight: normal;
+        word-spacing: 5px;
         text-align: center;
+        margin: 20px 20px 20px 20px;
     }
     .img-nos{
-        width: 70px;
-        height: 70px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        width: 200px;
+        height: 200px;
+        margin: 10px 10px 10px 10px;
+        transition: all 0.5s;
+    }
+    .img-nos:hover{
+        width: 230px;
+        margin: 0px 0px 0px 0px;
     }
     /* FIN DE NOSOTROS */
 
     /* PRODUCTOS */
     .material{
-        grid-template-columns: auto auto;
-        grid-template-rows: auto;
-        justify-content: space-around;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        justify-content: space-evenly;
         align-content: space-around;
     }
     .item__img {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
         margin: 20px 20px 0px 20px;
+        transition: all 0.5s;
+    }
+    .item__img:hover{
+        width: 130px;
+        height: 130px;
+        margin: 20px 0px 0px 0px;
     }
     .button_prod{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 12px;
-        font-weight: 700;
+        font-size: 16px;
+        font-weight: 500;
         border-radius: 20px;
         padding: 8px;
         margin-top: 4px;
         border: 1px solid #fdd9cd;
         background-color: #fdd9cd;
         color: black;
+        transition: all 0.3s;    
     }
-    
+    .button_prod:hover{
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+        padding: 10px;
+    }
     .item {
         background-color: #e64a19;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 16px;
+        font-size: 18px;
         border: solid #e64a19 1px;
-        width: 150px;
-        height: 260px;
+        width: 300px;
+        height: 300px;
         text-align: center;
-        margin-bottom: 5px;
+        margin: 10px 10px 10px 10px;
         border-radius: 16px;
     }
     .item__descripcion{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 16px;
+        line-height: 22px;
     }
     .item__precio{
         font-family: sans-serif;
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 30px;
+        font-size: 26px;
     }
     .tipoitem {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: bold;
-        margin-top: 10px;
         margin-left: 10px;  
     }
     /* FIN DE PRODUCTOS */
@@ -334,90 +265,121 @@ ul {
         grid-template-columns: auto auto;
         grid-template-rows: auto auto auto;
         grid-template-areas:
-            "texto texto"
-            "foto1 foto2"
-            "foto3 foto3";
-        justify-items: center;
+            "texto foto1"
+            "texto foto2"
+            "texto foto3";
     }
     .parraf-terminos {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
+        font-size: 18px;
+        font-weight: normal;
         word-spacing: 5px;
         text-align: justify;
-        margin:  5px 10px 0px 10px;
+        margin:  20px 150px 20px 100px;
     }
     .img-terminos{
-        width: 100px;
-        height: 100px;
-        margin:  10px 0px 10px 0px;
+        width: 200px;
+        height: 200px;
+        margin:  20px 80px 20px 0px;
     }
     /* FIN DE TERMINOS */
     
     /* CONTACTO */
+    .div-cont{
+        margin: 15px 0px 15px 0px;
+    }
     .cont-layout{
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
         justify-content: space-evenly;
-        background-color: #f3f3f3;
         margin-top: 15px;
     }
     .formulario__datos {
         background-color: #FF5722;
         border: solid 1px #FF5722;
-        width: 300px;
-        height: 460px;
+        width: 500px;
+        height: 400px;
         line-height: 22px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         border-radius: 10px;
-        margin-bottom: 10px;
-        padding: 5px;
+        margin-bottom: 20px;
+        padding: 20px;
+        transition: all 0.1s;
+    }
+    .formulario__datos:hover{
+        width: 510px;
     }
     #cont-button{
         height: 30px;
         width: 60px;
         background-color: #fdd9cd;
         border: solid 1px #fdd9cd;
-        border-radius: 15px;
+        border-radius: 10px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 650;
         text-align: center;
+        transition: all 0.2s;
+    }
+    #cont-button:hover{
+        background-color: black;
+        border: solid 1px black;
+        color: white;
+        height: 35px;
+        width: 65px;
     }
     #consult{
-        height: 90px; 
-        width: 280px;
+        height: 70px; 
+        width: 450px;
         background-color: #fdd9cd;
         border: solid 1px #fdd9cd;
         border-radius: 10px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 4px;
+        transition: all 0.5s;
+    }
+    #consult:focus{
+        background-color: black;
+        color:white
     }
     #correo{
-        height: 20px; 
-        width: 280px;
+        height: 25px; 
+        width: 300px;
         background-color: #fdd9cd;
         border: solid 1px #fdd9cd;
         border-radius: 10px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: all 0.5s;
+        padding: 4px;
+    }
+    #correo:focus{
+        background-color: black;
+        color:white
     }
     #name{
-        height: 20px; 
-        width: 280px;
+        height: 25px; 
+        width: 300px;
         background-color: #fdd9cd;
         border: solid 1px #fdd9cd;
         border-radius: 10px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 4px;
+        transition: all 0.5s;
+    }
+    #name:focus{
+        background-color: black;
+        color:white
     }
     #motiv{
-        height: 20px; 
-        width: 100px;
+        height: 25px; 
+        width: 120px;
+        text-align: center;
         background-color: #fdd9cd;
         border: solid 1px #fdd9cd;
         border-radius: 10px;
     }
     .img-contacto1 {
-        width: 100px;
-        height: 100px;
-        justify-self: end;
+        width: 300px;
+        height: 200px;
     }
     /* FIN DE CONTACTO */
 }
@@ -425,111 +387,50 @@ ul {
 
 
 
-/* Vista Tablet */
 
 
 
-/* Vista Desktop */
-@media screen and (min-width: 1200px) {
-    /* GRID GENERAL 
+
+
+
+/* VISTA MOBILE SMALL*/
+@media screen and (min-width: 576px) {
     #body-ini, #body-nos, #body-prod, #body-term, #body-cont {
-        background-image: linear-gradient(#faebe6, white);
-        grid-template-areas: 
-            "nav header header"
-            "nav main main"
-            "footer footer footer";
-        grid-template-columns: 10% auto auto;
-        grid-template-rows: auto auto auto;
-    } */
-
-
-    .tituloPrincipal {
-        color: #E64A19;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 50px;
-        font-weight: 800;
-        /*grid-area: titulo;*/
-        /*justify-self: center;*/
-        text-align: center; 
-        text-decoration: none;
+        background-image: linear-gradient(#faebe6, rgb(235, 137, 57));
     }
-    /* FIN GRID GENERAL */ 
     .logo {
-        width: 150px;
-        height: 80px;
-        /*grid-area: logo;*/
-        text-align: end;  
+        width: 70px;
     }
-    
-    /*   
+    #fondo-color1, #fondo-color2{
+        background-color: #fdd9cd;
     }
-    #rayas {
-        font-size: 30px;
-        display: block;
-    }  */
-    /* HEADER 
-    
-    header{
-        display: grid;
-        grid-template-columns: 15% auto 15%;
-        grid-template-rows: auto;
-        grid-template-areas: ". titulo logo";
+    .nav-link{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: 500;
     }
-    */
-    /* HEADER */
-    .menu--ul2 {
-        /*position: absolute;
-        display: none;*/
-        text-decoration: none;
-    }
-    /* MENU PRINCIPAL */
-    /*.link {
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-        margin: 30px;
-    }
-    .menu--ul1 {
-        list-style:none;
-        font-size: 0;
-    }
-    .menu__rayas {
-        display: inline-block;
-        width: 25%;
-        position:relative;
-        font-size: 14px;
-    }
-    
-    .menu__link {
-        font-size: 20px;
-            display: block;
-    }
-    ul li:hover ul {
-        display: block;
-    }*/
-
     /* FOOTER */
     #vidMuestra {
-        position: relative;
-        left: 50px;
-        width: 360px;
-        height: 200px;
+        width: 250px;
+        height: 140px;
+        margin-bottom: 10px;
     }
     .proyectoAbajo-div{
         background-color: rgb(80, 80, 80);
     }
-    .proyectoAbajo {
+    #proyectoAbajo1{
         color: white;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 20px;
+        font-size: 16px;
     }
     .footer__trabajo {
         text-align: center;
+        list-style: none;
     }
     .footer__trabajo--text {
         color: #FF5722;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: bold;
         text-decoration: none;
         border-style: outset;
@@ -538,20 +439,19 @@ ul {
         transition: all 0.5s;
     }
     .footer__trabajo--text:hover {
-        font-size: 20px;
+        font-size: 18px;
         color: white;
     }
     .redes {
         color: #FF5722;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 18px;
+        font-size: 14px;
         text-align: right;
     }
     .redes2 {
         color: #FF5722;
         text-align: right;
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 14px;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     #ig {
@@ -565,49 +465,34 @@ ul {
     /* FIN DE FOOTER */
 
     /* INICIO */
-    #main-inicio {
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto;
-        justify-content: space-evenly;
-        grid-template-areas: 
-            "img-1 img-2 img-3"
-            ". vid .";
-        column-gap: 10px;
-        row-gap: 10px;
-    }
     .img-inicio1{
-        width: 300px;
-        height: 300px;
+        width: 270px;
+        height: 200px;
+        margin: 80px 0px 0px 0px;
         border-radius: 15px;
-        margin-top: 25px;
     }
         .img-inicio2{
-            width: 300px;
-            height: 300px;
+            width: 270px;
+            height: 200px;
+            margin: 80px 0px 0px 0px;
             border-radius: 15px;
-            margin-top: 25px;
         }   
             .img-inicio3{
-                width: 300px;
-                height: 300px;
+                width: 290px;
+                height: 200px;
+                margin: 10px 0px 0px 0px;
                 border-radius: 15px;
-                margin-top: 25px;
             }
                 #vid-inicio{
-                    width: 300px;
-                    height: 200px;
+                    width: 500px;
+                    height: 290px;
+                    margin: 10px 0px 10px 0px;
                 }
-    .foto-ini{
-        width: 300px;
-        height: 300px;
-        border-radius: 15px;
-    }
     /* FIN DE INICIO */
 
     /* NOSOTROS */
     .nos-layout{
-        flex-direction: row;
-        justify-content: space-around;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .parraf-nos{
@@ -726,7 +611,972 @@ ul {
         grid-template-columns: auto auto;
         grid-template-rows: auto;
         justify-content: space-evenly;
-        background-color: #f3f3f3;
+        margin-top: 15px;
+    }
+    .formulario__datos {
+        background-color: #FF5722;
+        border: solid 1px #FF5722;
+        width: 500px;
+        height: 400px;
+        line-height: 22px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding: 20px;
+        transition: all 0.1s;
+    }
+    .formulario__datos:hover{
+        width: 510px;
+    }
+    #cont-button{
+        height: 30px;
+        width: 60px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 650;
+        text-align: center;
+        transition: all 0.2s;
+    }
+    #cont-button:hover{
+        background-color: black;
+        border: solid 1px black;
+        color: white;
+        height: 35px;
+        width: 65px;
+    }
+    #consult{
+        height: 70px; 
+        width: 450px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 4px;
+        transition: all 0.5s;
+    }
+    #consult:focus{
+        background-color: black;
+        color:white
+    }
+    #correo{
+        height: 25px; 
+        width: 300px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: all 0.5s;
+        padding: 4px;
+    }
+    #correo:focus{
+        background-color: black;
+        color:white
+    }
+    #name{
+        height: 25px; 
+        width: 300px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 4px;
+        transition: all 0.5s;
+    }
+    #name:focus{
+        background-color: black;
+        color:white
+    }
+    #motiv{
+        height: 25px; 
+        width: 120px;
+        text-align: center;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+    }
+    .img-contacto1 {
+        width: 300px;
+        height: 200px;
+    }
+    /* FIN DE CONTACTO */
+}
+
+
+
+
+
+
+
+
+
+/* Vista Tablet*/
+@media screen and (min-width: 768px) {
+    #body-ini, #body-nos, #body-prod, #body-term, #body-cont {
+        background-image: linear-gradient(#faebe6, rgb(235, 137, 57));
+    }
+    .logo {
+        width: 70px;
+    }
+    #fondo-color1, #fondo-color2{
+        background-color: #fdd9cd;
+    }
+    .nav-link{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    /* FOOTER */
+    #vidMuestra {
+        width: 360px;
+        height: 200px;
+    }
+    .proyectoAbajo-div{
+        background-color: rgb(80, 80, 80);
+    }
+    #proyectoAbajo1{
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+    }
+    .footer__trabajo {
+        text-align: center;
+        list-style: none;
+    }
+    .footer__trabajo--text {
+        color: #FF5722;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-style: outset;
+        padding-left: 5px;
+        padding-right: 5px;
+        transition: all 0.5s;
+    }
+    .footer__trabajo--text:hover {
+        font-size: 20px;
+        color: white;
+    }
+    .redes {
+        color: #FF5722;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        text-align: right;
+        font-weight: bold;
+    }
+    .redes2 {
+        color: #FF5722;
+        text-align: right;
+        font-size: 18px;
+        font-weight: bold;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #ig {
+        width: 30px;
+        height: 30px;
+    }
+    #facebook {
+        width: 30px;
+        height: 30px;
+    }
+    /* FIN DE FOOTER */
+
+    /* INICIO */
+    .img-inicio1{
+        width: 230px;
+        height: 200px;
+        margin: 80px 0px 0px 0px;
+        border-radius: 15px;
+    }
+        .img-inicio2{
+            width: 230px;
+            height: 200px;
+            margin: 80px 0px 0px 0px;
+            border-radius: 15px;
+        }   
+            .img-inicio3{
+                width: 230px;
+                height: 200px;
+                margin: 80px 0px 0px 0px;
+                border-radius: 15px;
+            }
+                #vid-inicio{
+                    width: 450px;
+                    height: 200px;
+                    margin: 10px 0px 10px 0px;
+                }
+    /* FIN DE INICIO */
+
+    /* NOSOTROS */
+    .nos-layout{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .parraf-nos{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        word-spacing: 5px;
+        text-align: center;
+        margin: 20px 20px 20px 20px;
+    }
+    .img-nos{
+        width: 200px;
+        height: 200px;
+        margin: 20px 20px 20px 20px;
+        transition: all 0.5s;
+    }
+    .img-nos:hover{
+        width: 250px;
+        margin: 0px 0px 0px 0px;
+    }
+    /* FIN DE NOSOTROS */
+
+    /* PRODUCTOS */
+    .material{
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        justify-content: space-evenly;
+        align-content: space-around;
+    }
+    .item__img {
+        width: 120px;
+        height: 120px;
+        margin: 20px 20px 0px 20px;
+        transition: all 0.5s;
+    }
+    .item__img:hover{
+        width: 130px;
+        height: 130px;
+        margin: 20px 0px 0px 0px;
+    }
+    .button_prod{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 20px;
+        padding: 8px;
+        margin-top: 4px;
+        border: 1px solid #fdd9cd;
+        background-color: #fdd9cd;
+        color: black;
+        transition: all 0.3s;    
+    }
+    .button_prod:hover{
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+        padding: 10px;
+    }
+    .item {
+        background-color: #e64a19;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        border: solid #e64a19 1px;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        margin: 10px 10px 10px 10px;
+        border-radius: 16px;
+    }
+    .item__descripcion{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .item__precio{
+        font-family: sans-serif;
+        font-size: 26px;
+    }
+    .tipoitem {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        margin-left: 10px;  
+    }
+    /* FIN DE PRODUCTOS */
+    
+    /* TERMINOS */
+    .term-layout{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "texto foto1"
+            "texto foto2"
+            "texto foto3";
+    }
+    .parraf-terminos {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        word-spacing: 5px;
+        text-align: justify;
+        margin:  20px 150px 20px 100px;
+    }
+    .img-terminos{
+        width: 200px;
+        height: 200px;
+        margin:  20px 80px 20px 0px;
+    }
+    /* FIN DE TERMINOS */
+    
+    /* CONTACTO */
+    .div-cont{
+        margin: 15px 0px 15px 0px;
+    }
+    .cont-layout{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+        margin-top: 15px;
+    }
+    .formulario__datos {
+        background-color: #FF5722;
+        border: solid 1px #FF5722;
+        width: 500px;
+        height: 400px;
+        line-height: 22px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding: 20px;
+        transition: all 0.1s;
+    }
+    .formulario__datos:hover{
+        width: 510px;
+    }
+    #cont-button{
+        height: 30px;
+        width: 60px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 650;
+        text-align: center;
+        transition: all 0.2s;
+    }
+    #cont-button:hover{
+        background-color: black;
+        border: solid 1px black;
+        color: white;
+        height: 35px;
+        width: 65px;
+    }
+    #consult{
+        height: 70px; 
+        width: 450px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 4px;
+        transition: all 0.5s;
+    }
+    #consult:focus{
+        background-color: black;
+        color:white
+    }
+    #correo{
+        height: 25px; 
+        width: 300px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: all 0.5s;
+        padding: 4px;
+    }
+    #correo:focus{
+        background-color: black;
+        color:white
+    }
+    #name{
+        height: 25px; 
+        width: 300px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 4px;
+        transition: all 0.5s;
+    }
+    #name:focus{
+        background-color: black;
+        color:white
+    }
+    #motiv{
+        height: 25px; 
+        width: 120px;
+        text-align: center;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+    }
+    .img-contacto1 {
+        width: 300px;
+        height: 200px;
+    }
+    /* FIN DE CONTACTO */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* VISTA DE TABLET-2 992px*/
+@media screen and (min-width: 992px) {
+    #body-ini, #body-nos, #body-prod, #body-term, #body-cont {
+        background-image: linear-gradient(#faebe6, rgb(235, 137, 57));
+    }
+    .logo {
+        width: 80px;
+    }
+    #fondo-color1, #fondo-color2{
+        background-color: #fdd9cd;
+    }
+    .nav-link{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 22px;
+        font-weight: 650;
+    }
+    .form-control{
+        width: 300px;
+    }
+    /* FOOTER */
+    #vidMuestra {
+        width: 360px;
+        height: 200px;
+    }
+    .proyectoAbajo-div{
+        background-color: rgb(80, 80, 80);
+    }
+    #proyectoAbajo1{
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+    }
+    .footer__trabajo {
+        text-align: center;
+        list-style: none;
+    }
+    .footer__trabajo--text {
+        color: #FF5722;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-style: outset;
+        padding-left: 5px;
+        padding-right: 5px;
+        transition: all 0.5s;
+    }
+    .footer__trabajo--text:hover {
+        font-size: 20px;
+        color: white;
+    }
+    .redes {
+        color: #FF5722;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        text-align: right;
+        font-weight: bold;
+    }
+    .redes2 {
+        color: #FF5722;
+        text-align: right;
+        font-size: 18px;
+        font-weight: bold;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #ig {
+        width: 30px;
+        height: 30px;
+    }
+    #facebook {
+        width: 30px;
+        height: 30px;
+    }
+    /* FIN DE FOOTER */
+
+    /* INICIO */
+    .img-inicio1{
+        width: 300px;
+        height: 300px;
+        margin: 80px 0px 0px 0px;
+        border-radius: 15px;
+    }
+        .img-inicio2{
+            width: 300px;
+            height: 300px;
+            margin: 80px 0px 0px 0px;
+            border-radius: 15px;
+        }   
+            .img-inicio3{
+                width: 300px;
+                height: 300px;
+                margin: 80px 0px 0px 0px;
+                border-radius: 15px;
+            }
+                #vid-inicio{
+                    width: 450px;
+                    height: 300px;
+                    margin: 10px 0px 10px 0px;
+                }
+    /* FIN DE INICIO */
+
+    /* NOSOTROS */
+    .nos-layout{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .parraf-nos{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        word-spacing: 5px;
+        text-align: center;
+        margin: 20px 20px 20px 20px;
+    }
+    .img-nos{
+        width: 200px;
+        height: 200px;
+        margin: 20px 20px 20px 20px;
+        transition: all 0.5s;
+    }
+    .img-nos:hover{
+        width: 250px;
+        margin: 0px 0px 0px 0px;
+    }
+    /* FIN DE NOSOTROS */
+
+    /* PRODUCTOS */
+    .material{
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        justify-content: space-evenly;
+        align-content: space-around;
+    }
+    .item__img {
+        width: 120px;
+        height: 120px;
+        margin: 20px 20px 0px 20px;
+        transition: all 0.5s;
+    }
+    .item__img:hover{
+        width: 130px;
+        height: 130px;
+        margin: 20px 0px 0px 0px;
+    }
+    .button_prod{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 20px;
+        padding: 8px;
+        margin-top: 4px;
+        border: 1px solid #fdd9cd;
+        background-color: #fdd9cd;
+        color: black;
+        transition: all 0.3s;    
+    }
+    .button_prod:hover{
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+        padding: 10px;
+    }
+    .item {
+        background-color: #e64a19;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        border: solid #e64a19 1px;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        margin: 10px 10px 10px 10px;
+        border-radius: 16px;
+    }
+    .item__descripcion{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .item__precio{
+        font-family: sans-serif;
+        font-size: 26px;
+    }
+    .tipoitem {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        margin-left: 10px;  
+    }
+    /* FIN DE PRODUCTOS */
+    
+    /* TERMINOS */
+    .term-layout{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "texto foto1"
+            "texto foto2"
+            "texto foto3";
+    }
+    .parraf-terminos {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        word-spacing: 5px;
+        text-align: justify;
+        margin:  20px 150px 20px 100px;
+    }
+    .img-terminos{
+        width: 200px;
+        height: 200px;
+        margin:  20px 80px 20px 0px;
+    }
+    /* FIN DE TERMINOS */
+    
+    /* CONTACTO */
+    .div-cont{
+        margin: 15px 0px 15px 0px;
+    }
+    .cont-layout{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: space-evenly;
+        margin-top: 15px;
+    }
+    .formulario__datos {
+        background-color: #FF5722;
+        border: solid 1px #FF5722;
+        width: 500px;
+        height: 400px;
+        line-height: 22px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        padding: 20px;
+        transition: all 0.1s;
+    }
+    .formulario__datos:hover{
+        width: 510px;
+    }
+    #cont-button{
+        height: 30px;
+        width: 60px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 650;
+        text-align: center;
+        transition: all 0.2s;
+    }
+    #cont-button:hover{
+        background-color: black;
+        border: solid 1px black;
+        color: white;
+        height: 35px;
+        width: 65px;
+    }
+    #consult{
+        height: 70px; 
+        width: 450px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 4px;
+        transition: all 0.5s;
+    }
+    #consult:focus{
+        background-color: black;
+        color:white
+    }
+    #correo{
+        height: 25px; 
+        width: 300px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: all 0.5s;
+        padding: 4px;
+    }
+    #correo:focus{
+        background-color: black;
+        color:white
+    }
+    #name{
+        height: 25px; 
+        width: 300px;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 4px;
+        transition: all 0.5s;
+    }
+    #name:focus{
+        background-color: black;
+        color:white
+    }
+    #motiv{
+        height: 25px; 
+        width: 120px;
+        text-align: center;
+        background-color: #fdd9cd;
+        border: solid 1px #fdd9cd;
+        border-radius: 10px;
+    }
+    .img-contacto1 {
+        width: 300px;
+        height: 200px;
+    }
+    /* FIN DE CONTACTO */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* VISTA DESKTOP */
+@media screen and (min-width: 1200px) {
+    #body-ini, #body-nos, #body-prod, #body-term, #body-cont {
+        background-image: linear-gradient(#faebe6, rgb(235, 137, 57));
+    }
+    .logo {
+        width: 80px;
+    }
+    #fondo-color1, #fondo-color2{
+        background-color: #fdd9cd;
+    }
+    .nav-link{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 22px;
+        font-weight: 650;
+    }
+    .form-control{
+        width: 400px;
+    }
+    /* FOOTER */
+    #vidMuestra {
+        width: 360px;
+        height: 200px;
+    }
+    .proyectoAbajo-div{
+        background-color: rgb(80, 80, 80);
+    }
+    #proyectoAbajo1{
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+    }
+    .footer__trabajo {
+        text-align: center;
+        list-style: none;
+    }
+    .footer__trabajo--text {
+        color: #FF5722;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-style: outset;
+        padding-left: 5px;
+        padding-right: 5px;
+        transition: all 0.5s;
+    }
+    .footer__trabajo--text:hover {
+        font-size: 20px;
+        color: white;
+    }
+    .redes {
+        color: #FF5722;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        text-align: right;
+    }
+    .redes2 {
+        color: #FF5722;
+        text-align: right;
+        font-size: 18px;
+        font-weight: bold;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #ig {
+        width: 30px;
+        height: 30px;
+    }
+    #facebook {
+        width: 30px;
+        height: 30px;
+    }
+    /* FIN DE FOOTER */
+
+    /* INICIO */
+    .img-inicio1{
+        width: 310px;
+        height: 300px;
+        margin: 80px 0px 0px 0px;
+        border-radius: 15px;
+    }
+        .img-inicio2{
+            width: 310px;
+            height: 300px;
+            margin: 80px 0px 0px 0px;
+            border-radius: 15px;
+        }   
+            .img-inicio3{
+                width: 310px;
+                height: 300px;
+                margin: 80px 0px 0px 0px;
+                border-radius: 15px;
+            }
+                #vid-inicio{
+                    width: 550px;
+                    height: 300px;
+                    margin: 10px 0px 10px 0px;
+                }
+    /* FIN DE INICIO */
+
+    /* NOSOTROS */
+    .nos-layout{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .parraf-nos{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        word-spacing: 5px;
+        text-align: center;
+        margin: 20px 20px 20px 20px;
+    }
+    .img-nos{
+        width: 180px;
+        height: 180px;
+        margin: 10px 10px 10px 10px;
+        transition: all 0.5s;
+    }
+    /*.img-nos:hover{
+        width: 250px;
+        margin: 0px 0px 0px 0px;
+    }*/
+    /* FIN DE NOSOTROS */
+
+    /* PRODUCTOS */
+    .material{
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        justify-content: space-evenly;
+        align-content: space-around;
+    }
+    .item__img {
+        width: 120px;
+        height: 120px;
+        margin: 20px 20px 0px 20px;
+        transition: all 0.5s;
+    }
+    .item__img:hover{
+        width: 130px;
+        height: 130px;
+        margin: 20px 0px 0px 0px;
+    }
+    .button_prod{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 20px;
+        padding: 8px;
+        margin-top: 4px;
+        border: 1px solid #fdd9cd;
+        background-color: #fdd9cd;
+        color: black;
+        transition: all 0.3s;    
+    }
+    .button_prod:hover{
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+        padding: 10px;
+    }
+    .item {
+        background-color: #e64a19;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        border: solid #e64a19 1px;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        margin: 10px 10px 10px 10px;
+        border-radius: 16px;
+    }
+    .item__descripcion{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .item__precio{
+        font-family: sans-serif;
+        font-size: 26px;
+    }
+    .tipoitem {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        margin-left: 10px;  
+    }
+    /* FIN DE PRODUCTOS */
+    
+    /* TERMINOS */
+    .term-layout{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "texto foto1"
+            "texto foto2"
+            "texto foto3";
+    }
+    .parraf-terminos {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        word-spacing: 5px;
+        text-align: justify;
+        margin:  20px 150px 20px 100px;
+    }
+    .img-terminos{
+        width: 200px;
+        height: 200px;
+        margin:  20px 80px 20px 0px;
+    }
+    /* FIN DE TERMINOS */
+    
+    /* CONTACTO */
+    .div-cont{
+        margin: 15px 0px 15px 0px;
+    }
+    .cont-layout{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: space-evenly;
         margin-top: 15px;
     }
     .formulario__datos {

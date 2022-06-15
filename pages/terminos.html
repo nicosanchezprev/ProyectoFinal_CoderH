@@ -7,27 +7,72 @@
     
     <link type="image/png" sizes="16x16" rel="shortcut icon" href="../assets/image/Captura de pantalla 2022-05-09 184122.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css"/>
     
     <title>HZ Construcciones</title>
 </head>
 <body id="body-term">
-    <header id="header-term">
-        <a href="../index.html" class="logo"><img src="../assets/image/Captura de pantalla 2022-05-09 184122.png" class="logo"></a>
-        <a href="../index.html" class="tituloPrincipal"><h1 class="tituloPrincipal">HZ Construcciones</h1></a>
-    </header>
-    <nav id="nav-term">
-        <ul class="menu--ul1">    
-            <li class="menu__rayas"><a id="rayas"><ion-icon name="menu" size="large"></ion-icon></a>
-                <ul class="menu--ul2">
-                    <li class="menu__link"><a href="../index.html" class="link">Inicio</a></li>
-                    <li class="menu__link"><a href="./nosotros.html" class="link">Nosotros</a></li>
-                    <li class="menu__link"><a href="./productos.html" class="link">Productos</a></li>
-                    <li class="menu__link"><a href="./contacto.html" class="link">Contacto</a></li>
-                </ul>
-            </li>
-        </ul>
+    <header> 
+        <nav class="navbar fixed-top" id="nav-bar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+            <img src="..//assets/image/Captura de pantalla 2022-05-09 184122.png" class="logo"/>
+            </a>
+            <form class="d-flex" role="search">
+                <input
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="Buscar"
+                    aria-label="Search"/>
+                <button class="btn btn-outline-dark" type="submit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header" id="fondo-color1">
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                    </button>
+                </div>
+                <div class="offcanvas-body" id="fondo-color2">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../pages/terminos.html">Terminos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </nav>
+    </header>
     <main>
         <h2 class="subtitulo-terminos">TERMINOS</h2>
         <div class="term-layout">
@@ -63,22 +108,42 @@
         </div>
     </main>
     <footer>
-        <div class="proyectoAbajo-div">
-            <h3 class="proyectoAbajo">Mira uno de nuestros ultimos proyectos!</h3>
-                <nav class="proyectoAbajo">
-                    <iframe src="https://www.youtube.com/embed/IwPrCVlFRhg" id="vidMuestra"title="YouTube video player"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-             </nav>
+        <div class="container-fluid">
+            <div class="row justify-content-start">
+                <h3 class="col-sm col-md col-xl-6 " id="proyectoAbajo1">Mira uno de nuestros ultimos proyectos!</h3>
+            </div>
+            <div class="row">
+                <div>
+                    <iframe src="https://www.youtube.com/embed/IwPrCVlFRhg" 
+                        id="vidMuestra" 
+                        title="YouTube video player"  
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>  
+                </div>
+            </div>
         </div>
-            <nav>  
-                <ul>
-                    <li class="footer__trabajo"><a href="./contacto.html" class="footer__trabajo--text">TRABAJA CON NOSOTROS</a></li>
-                </ul>
-            </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div>  
+                    <ul>
+                        <li class="footer__trabajo">
+                            <a href="./contacto.html" class="footer__trabajo--text">TRABAJA CON NOSOTROS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
                 <h3 class="redes">Nuestras redes</h3>
-                    <h4 class="redes2">
-                        <img src="../assets/image/instagram.png" id="ig" alt="logo intagram" > @hz.construcciones 
-                        <img src="../assets/image/facebook.png" alt="logo facebook" id="facebook"> /construccioneshz.corralon
-                    </h4>
+            </div>
+            <div class="row">
+                <h4 class="redes2">
+                    <img src="../assets/image/instagram.png" id="ig" alt="logo intagram" > @hz.construcciones 
+                    <img src="../assets/image/facebook.png" alt="logo facebook" id="facebook"> /construccioneshz.corralon
+                </h4>
+            </div>
+        </div>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
