@@ -75,53 +75,60 @@
     </header>
     <main>
         <h2 class="subtitulo-contacto">CONTACTO</h2>
-            <article class="cont-layout"> 
-                <img src="../assets/image/Constructor-PNG-HD-Quality.png" type="image.png" class="img-contacto1">
-            
-                <form  action="#" method="GET" enctype="multipart/form-data">
-                    <fieldset class="formulario__datos">
-                        
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-6 col-xl-4">    
+                    <form class="row g-3">
                         <h5>INFORMACION PERSONAL</h5>
-                        
-                        <div class="div-cont">
-                            <label for="motivo">Motivo:</label>
-                            <select id="motiv" name="motivo">
-                                <option value="consulta">Consulta</option>
-                                <option value="presupuesto">Presupuesto</option>
-                                <option value="postulacion">Postulacion</option>
+                        <div class="col-md-6">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecciona el motivo</option>
+                                <option value="1">Consulta</option>
+                                <option value="2">Presupuesto</option>
+                                <option value="3">Postulación</option>
                             </select>
-                        </div>  
-                        
-                        <div class="div-cont"> 
-                            <label for="nombre">Nombre y Apellido:</label>
-                                <input id="name" name="nombre" type="text" placeholder="  Nombre y Apellido"/>
                         </div>
-                        
-                        <div class="div-cont">
-                            <label for="sexo">Sexo:</label>
-                                <input name="sexo" type="radio" value="hombre"/>
-                            <span>Hombre</span>
-                                <input name="sexo" type="radio" value="mujer"/>
-                            <span>Mujer</span>
-                                <input name="sexo" type="radio" value="otro"/>
-                            <span>Otro</span>
+                        <div class="col-md-12">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4">
                         </div>
-                        
-                        <div class="div-cont">
-                            <label for="email">Correo electronico:</label>
-                                <input id="correo" name="email" type="text" placeholder="  ejemplo@email.com"/>
+                        <div class="col-md-12">
+                            <label for="inputPassword4" class="form-label">Nombre y Apellido</label>
+                            <input type="password" class="form-control" id="inputPassword4">
                         </div>
-                        
-                        <div class="div-cont">
-                            <label for="consulta">Consulta:</label>
-                            <textarea id="consult"></textarea>
+                        <div class="col-12">
+                            <label for="inputAddress2" class="form-label">Provincia</label>
+                            <input type="text" class="form-control" id="inputAddress2">
                         </div>
-                        
-                        <button id="cont-button">Enviar</button>
-
-                    </fieldset>
-                </form>
-            </article>
+                        <div class="col-md-12">
+                            <label for="inputCity" class="form-label">Partido</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label">Sexo</label>
+                            <select id="inputState" class="form-select">
+                                <option selected>Mujer</option>
+                                <option>Hombre</option>
+                                <option>Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label"></label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Consulta"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">Acepto los terminos y condiciones</label>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button type="submit" class="btn btn-dark">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="container-fluid">
