@@ -21,6 +21,49 @@ ul {
 #nav-bar{
     background-color: #f3663b;
 }
+.logo:hover {
+    animation: shake 0.3s;
+}
+@keyframes shake {
+    25%{transform: rotate(-10deg)}
+    25%{transform: rotate(10deg)}
+    25%{transform: rotate(-10deg)}
+    25%{transform: rotate(10deg)};
+}
+.form-control{
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.form-control:focus {
+    background-color: #333333;
+    color: white;
+}
+.btn-outline-dark{
+    border-radius: 40px;    
+    transition: all 0.5s;
+}
+.btn-outline-dark:hover{
+    transform: rotate(360deg) scale(0.9);
+}
+.navbar-toggler{
+    border-radius: 20px;
+    border: none;
+}
+.btn-light{
+    border-radius: 20px;
+    transition: all 0.3s;
+    font-weight: bold;
+    box-shadow: 0px 8px 15px
+        rgba(0, 0, 0, 0.1);
+}
+.btn-light:hover{
+    background: #FF5722;
+    border: #FF5722;
+    transform:translateY(-7px);
+    color: #fff;
+    box-shadow: 0px 10px 25px
+        #eb582c;
+}
 /* Fin de generales */
 
 /* SUBTITULOS*/
@@ -30,16 +73,6 @@ ul {
     margin-top: 80px;
 }
 /* FIN DE SUBTITULOS*/
-
-/* CONTACTO */
-.formulario {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* FIN CONTACTO */
-
-
-
 
 
 
