@@ -8,7 +8,7 @@
     <link type="image/png" sizes="16x16" rel="shortcut icon" href="./assets/image/Captura de pantalla 2022-05-09 184122.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./scss/style.css"/>
     
     <title>HZ Construcciones</title>
 </head>
@@ -17,7 +17,7 @@
         <nav class="navbar fixed-top" id="nav-bar">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
-            <img src="./assets/image/Captura de pantalla 2022-05-09 184122.png" class="logo"/>
+            <img src="./assets/image/Captura de pantalla 2022-05-09 184122.png" class="logo" alt="logo"/>
             </a>
             <form class="d-flex" role="search">
                 <input
@@ -74,20 +74,21 @@
     </nav>
     </header>
     <main id="main-inicio">
+        <h1 id="titulo-inicio">Hernandez Construcciones</h1>
         <div class="container-fluid">
             <div class="row justify-content-around">
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                    <img src="./assets/image/01.MujeresConstrccion.jpg" class="img-inicio1"/>
+                    <img src="./assets/image/01.MujeresConstrccion.jpg" class="img-inicio1" alt="img-inicio1"/>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                    <img src="./assets/image/personal-en-una-obra-01.jpg" class="img-inicio2"/>
+                    <img src="./assets/image/personal-en-una-obra-01.jpg" class="img-inicio2" alt="img-inicio2"/>
                 </div>
                 <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                    <img src="./assets/image/albañil.jpg" class="img-inicio3"/>
+                    <img src="./assets/image/albañil.jpg" class="img-inicio3" alt="img-inicio3"/>
                 </div>    
             </div>     
             <div class="row justify-content-center">
-                <video class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="vid-inicio" autoplay muted>
+                <video class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="vid-inicio" autoplay loop muted>
                     <source src="./assets/video/Work - 40813.mp4" type="video/mp4"/>Tu navegador no es compatible con videos html5
                 </video>
             </div>
