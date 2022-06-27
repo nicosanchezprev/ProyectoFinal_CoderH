@@ -21,6 +21,7 @@
             </a>
             <form class="d-flex" role="search">
                 <input
+                    id="barra-buscar"
                     class="form-control me-2"
                     type="search"
                     placeholder="Buscar"
@@ -74,33 +75,38 @@
     </nav>
     </header>
     <main id="main-inicio">
-        <h1 id="titulo-inicio">Hernandez Construcciones</h1>
-        <div class="container-fluid">
-            <div class="row justify-content-around">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                    <img src="./assets/image/01.MujeresConstrccion.jpg" class="img-inicio1" alt="img-inicio1"/>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                    <img src="./assets/image/personal-en-una-obra-01.jpg" class="img-inicio2" alt="img-inicio2"/>
-                </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3">
-                    <img src="./assets/image/albañil.jpg" class="img-inicio3" alt="img-inicio3"/>
+            <div id="tit-ini">
+                <h1 id="titulo-inicio">
+                HERNANDEZ CONSTRUCCIONES, <br>
+                        <div class="rotar-palabra">
+                            <span class="span-palabra1">venta de materiales.</span>
+                            <span class="span-palabra2">instalación de servicios.</span>
+                            <span class="span-palabra3">asfaltado de caminos.</span>
+                        </div>
+                </h1>
+            </div>
+            <img src="./assets/image/img-index2.jpg" alt="img-inicio2" id="img-ini1">
+            <div id="cardsI">
+                <div id="card-ini1" class="subtitulo-card">    
+                    <h2 class="subtitulo-ini">Construcción tradicional</h2>
                 </div>    
-            </div>     
-            <div class="row justify-content-center">
-                <video class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" id="vid-inicio" autoplay loop muted>
-                    <source src="./assets/video/Work - 40813.mp4" type="video/mp4"/>Tu navegador no es compatible con videos html5
-                </video>
+                <div id="card-ini2" class="subtitulo-card">
+                    <h2 class="subtitulo-ini">Construcción en seco</h2>
+                </div>
+                <div id="card-ini3" class="subtitulo-card">    
+                    <h2 class="subtitulo-ini">Construcciones metalicas</h2>
+                </div>    
+                <div id="card-ini4" class="subtitulo-card">
+                    <h2 class="subtitulo-ini">Estructuras de hormigón</h2>
+                </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <div class="container-fluid">
-            <div class="row justify-content-start">
-                <h3 class="col-sm col-md col-xl-6 " id="proyectoAbajo1">Mira uno de nuestros ultimos proyectos!</h3>
-            </div>
-            <div class="row">
-                <div>
+            <img src="./assets/image/img-index3.jpg" alt="img-inicio3" id="img-ini2">
+            
+            <div class="video-index">
+                <div class="video-index__titulo">
+                    <h2>Mira uno de nuestros ultimos proyectos!</h2>
+                </div>
+                <div class="video-index__vid">
                     <iframe src="https://www.youtube.com/embed/IwPrCVlFRhg" 
                         id="vidMuestra" 
                         title="YouTube video player"  
@@ -110,7 +116,8 @@
                     </iframe>  
                 </div>
             </div>
-        </div>
+        </main>
+    <footer>
         <div class="container-fluid">
             <div class="row">
                 <div>  
