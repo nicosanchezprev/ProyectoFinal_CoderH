@@ -6,7 +6,23 @@
     padding: 0;
 }
 /* Generales */
-
+/* Scrollbar */
+:root {
+    scrollbar-color: #7f7f7f #fff;
+    scrollbar-width: thin;
+}
+:root::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+:root::-webkit-scrollbar-thumb {
+    background-color: #5a5a5a;
+    border: 2px solid #f1f2f3;
+    border-radius: 20px;
+}
+:root::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+/* Fin de Scrollbar */
 footer {
     background-image: linear-gradient(#131313 , #000);
 }
@@ -37,17 +53,13 @@ ul {
             color: white;
         }
 }
-.btn-outline-dark{
-    width: 2.5rem;
-    border-radius: 3rem;    
-    transition: all 0.5s;
-        &:hover{
-            transform: rotate(360deg) scale(0.9);
-        }
-}
 .navbar-toggler{
     border-radius: 20px;
     border: none;
+}
+.btn-outline-dark{
+    width: 40px;
+    border-radius: 50%;
 }
 .btn-light{
     border-radius: 20px;
@@ -67,12 +79,27 @@ ul {
 .card {
     box-shadow: 0.5px 0.5px 3px 0.3px rgba(0, 0, 0, 0.2);;
 }
+
+/* GRID-INICIO */
+#tit-ini{
+    grid-area: titulo;
+}
+#img-ini1{
+    grid-area: img1;
+    }
+#img-ini2{
+    grid-area: img2;
+}
+#cardsI{
+    grid-area: cards;
+}
+.video-index{
+    grid-area: vid-p;
+}
+/* FIN GRID-INICIO */
 /* Fin de generales */
 
 /*TITULOS*/
-#titulo-inicio{
-    margin-top: 80px;
-}
 .titulo-nosotros, .titulo-productos, .titulo-terminos, .titulo-contacto {
     font-family: $sans-serif;
     text-align: center;
@@ -92,7 +119,7 @@ ul {
         background-color: white;
     }
     .logo {
-        width: 70px;
+        width: 60px;
     }
     #fondo-color1, #fondo-color2{
         background-color: $color-secun;
@@ -104,11 +131,14 @@ ul {
     }
     #barra-buscar{
         width: 90px;
+        &:focus{
+            width: 100px;
+        }
     }
-    
     /* FOOTER */
     #proyectoAbajo1{
-        font-size: 20px;
+        font-size: 14px;
+        color: white;
     }
     .footer__trabajo {
         text-align: center;
@@ -118,24 +148,18 @@ ul {
     .footer__trabajo--text {
         color: $color-prim;
         font-family: $sans-serif;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: bold;
         text-decoration: none;
         border-style: outset;
         padding-left: 5px;
         padding-right: 5px;
     }
-    .redes {
+    .redes, .redes2 {
         color: $color-prim;
         font-family: $sans-serif;
-        font-size: 14px;
+        font-size: 10px;
         text-align: right;
-    }
-    .redes2 {
-        color: $color-prim;
-        text-align: right;
-        font-size: 14px;
-        font-family: $sans-serif;
     }
     #ig {
         width: 20px;
@@ -148,25 +172,153 @@ ul {
     /* FIN DE FOOTER */
 
     /* INICIO */
-    .img-inicio1{
-        width: 140px;
-        margin: 80px 0px 0px 0px;
-        border-radius: 15px;
+    #titulo-inicio{
+        position: relative;
+        color: black;
+        font-family: $sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 110px;
+        top: 0;
+        left: 0;
     }
-        .img-inicio2{
-            width: 140px;
-            margin: 80px 0px 0px 0px;
-            border-radius: 15px;
-        }   
-            .img-inicio3{
-                width: 150px;
-                margin: 10px 0px 0px 0px;
-                border-radius: 15px;
+    .rotar-palabra{
+        display: inline;
+        margin-left: 60px;
+    }
+    .span-palabra1, .span-palabra2, .span-palabra3{
+        width: max-content;
+        color: white;
+        position: absolute;
+        background-color: $color-prim;
+        padding-inline: 10px;
+        opacity: 0;
+        transform-origin: 10% 75%;
+    }
+    .span-palabra1{
+        animation: rotarP 12s 0s linear infinite;
+    }
+    .span-palabra2{
+        animation: rotarP 12s 4s linear infinite;
+    }
+    .span-palabra3{
+        animation: rotarP 12s 8s linear infinite;
+    }
+    @keyframes rotarP{
+        5%{
+            opacity: 1;
+        }
+        10%,
+        20%{
+            opacity: 1;
+            transform: rotate(3deg);
+        }
+        15%{
+            transform: rotate(-1deg);
+        }
+        25%{
+            opacity: 0;
+            transform: translateY(90px)
+            rotate(10deg);
+        }
+    }
+    .subtitulo-ini{
+        font-family: $sans-serif;
+        text-align: center;
+        font-size: 18px;
+    }
+    .subtitulo-card{
+        background-color: $color-secun;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px 0.1px black;
+        padding: 8px;
+    }
+    #main-inicio{
+        display: grid;
+        grid-template-areas: 
+            "titulo"
+            "img1"
+            "cards"
+            "vid-p"
+            "img2";
+    }
+    #tit-ini{
+        justify-self: center;
+    }
+        #img-ini1{
+            justify-self: end;
+            margin-top: 70px;
+            width: 200px;
+        }
+        #img-ini2{
+            width: 200px;
+            justify-self: start;
+        }
+        #cardsI{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 10px;
+            row-gap: 10px;
+            margin-bottom: 20px;
+        }
+            #card-ini1, #card-ini2, #card-ini3, #card-ini4{
+                width: 140px;
             }
-                #vid-inicio{
-                    width: 450px;
-                    margin: 10px 0px 10px 0px;
-                }
+    
+    .video-index{
+        align-self: center;
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 2
+    }
+
+
+    #vidMuestra {
+        width: 200px;
+        height: 110px;
+    }
+    .video-index{
+        & .video-index__titulo{
+            width: fit-content;
+            text-align: center;
+            justify-self: center;
+            background-color: $color-secun2;
+            padding:8px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            box-shadow: 0px 1px 5px 0.4px #eb582c;
+            animation: proyectoMover 2s infinite ease;
+            & h2{
+                color: white;
+                font-family: $sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        & .video-index__vid{
+            width:fit-content;
+            justify-self: center;
+        }  
+    }
+    @keyframes proyectoMover {
+        0%{
+            transform:translateY(-5px);
+        }
+        50%{
+            transform: translateY(5px);
+        }
+        100%{
+            transform: translateY(5px);
+        }
+        50%{
+            transform: translateY(-5px);
+        }
+        0%{
+            transform: translateY(5px);
+        }
+    }
     /* FIN DE INICIO */
 
     /* NOSOTROS */
@@ -179,8 +331,8 @@ ul {
         margin: 20px 20px 20px 20px;
     }
     .img-nos{
-        width: 200px;
-        height: 200px;
+        width: 120px;
+        height: 120px;
         margin: 10px 10px 10px 10px;
         transition: all 0.5s;
     }
@@ -212,6 +364,7 @@ ul {
     .item__precio{
         font-family: $sans-serif;
         font-size: 26px;
+        font-weight: 600;
     }
     .tipoitem {
         font-family: $sans-serif;
@@ -255,40 +408,56 @@ ul {
 /* VISTA MOBILE SMALL*/
 @media screen and (min-width: 576px) {
     #barra-buscar{
-        width: 300px;
+        width: 260px;
+        &:focus{
+            width: 290px;
+        }
     }
     
 
     /* INICIO */
-    .img-inicio1{
-        width: 270px;
-        margin: 80px 0px 0px 0px;
-        border-radius: 15px;
+    #titulo-inicio{
+        font-size: 26px;
+        margin-top: 90px;
     }
-        .img-inicio2{
-            width: 270px;
-            margin: 80px 0px 0px 0px;
-            border-radius: 15px;
-        }   
-            .img-inicio3{
-                width: 290px;
-                margin: 10px 0px 0px 0px;
-                border-radius: 15px;
+    .rotar-palabra{
+        margin-left: 130px;
+    }
+    .subtitulo-ini{
+        font-size: 20px;
+    }
+    .subtitulo-card{
+        padding: 10px;
+    }
+        #img-ini1{
+            width: 400px;
+        }
+        #img-ini2{
+            width: 450px;
+        }
+            #card-ini1, #card-ini2, #card-ini3, #card-ini4{
+                width: 160px;
             }
-                #vid-inicio{
-                    width: 500px;
-                    margin: 10px 0px 10px 0px;
-                }
+    #vidMuestra {
+        width: 300px;
+        height: 160px;
+    }
+    .video-index{
+        & .video-index__titulo{
+            box-shadow: 0px 0px 6px 0.4px #eb582c;
+            & h2{
+                font-size: 20px;
+                font-weight: 650;
+            }
+        } 
+    }
     /* FIN DE INICIO */
 
     /* NOSOTROS */
     .img-nos{
+        width: 200px;
+        height: 200px;
         margin: 20px 20px 20px 20px;
-        transition: all 0.5s;
-            &:hover{
-                width: 250px;
-                margin: 0px 0px 0px 0px;
-            }
     }
     /* FIN DE NOSOTROS */
 
@@ -325,7 +494,10 @@ ul {
         font-size: 22px;
     }
     #barra-buscar{
-        width: 360px;
+        width: 320px;
+        &:focus{
+            width: 350px;
+        }
     }
     
     /* FOOTER */
@@ -362,15 +534,38 @@ ul {
     /* FIN DE FOOTER */
 
     /* INICIO */
-    .img-inicio1{
-        width: 230px;
+    #titulo-inicio{
+        font-size: 30px;
+        margin-top: 70px;
+        top: 60px;
+        left: 40px;
     }
-        .img-inicio2{
-            width: 230px;
-        }   
-            .img-inicio3{
-                width: 230px;
+    #main-inicio{
+        display: grid;
+        grid-template-areas: 
+            "titulo titulo titulo titulo"
+            "img1 img1 img1 img1"
+            "cards cards cards cards"
+            "img2 img2 img2 vid-p";
+    }
+    #tit-ini{
+        justify-self: start;
+    }
+        #card-ini1, #card-ini2, #card-ini3, #card-ini4{
+            width: 170px;
+        }
+    #vidMuestra {
+        width: 300px;
+        height: 160px;
+    }
+    .video-index{
+        & .video-index__titulo{
+            & h2{
+                font-size: 16px;
             }
+        }
+    }
+    
     /* FIN DE INICIO */
 
     /* NOSOTROS */
@@ -430,12 +625,21 @@ ul {
                 25%{transform: rotate(10deg)};
             }
     }
+    .btn-outline-dark{    
+        transition: all 0.5s;
+            &:hover{
+                transform: rotate(360deg) scale(0.95);
+            }
+    }
     .nav-link{
         font-size: 22px;
         font-weight: 650;
     }
     #barra-buscar{
-        width: 390px;
+        width: 360px;
+        &:focus{
+            width: 390px;
+        }
     }
     
     /* FOOTER */
@@ -449,6 +653,7 @@ ul {
     
     .footer__trabajo--text {
         font-size: 18px;
+        position: relative;
         transition: all 0.5s;
             &:hover {
                 font-size: 20px;
@@ -456,26 +661,49 @@ ul {
             }
     }
     
-    .redes {
+    .redes, .redes2{
         font-size: 18px;
         font-weight: bold;
+        position: relative;
     }
-    .redes2 {
-        font-size: 18px;
-        font-weight: bold;
-    }
+
     /* FIN DE FOOTER */
 
     /* INICIO */
-    .img-inicio1{
-        width: 300px;
+    #titulo-inicio{
+        font-size: 36px;
+        margin-top: 70px;
     }
-        .img-inicio2{
-            width: 300px;
-        }   
-            .img-inicio3{
-                width: 300px;
+    .rotar-palabra{
+        margin-left: 130px;
+    }
+    .subtitulo-ini{
+        font-size: 20px;
+    }
+    .subtitulo-card{
+        padding: 10px;
+    }
+        #img-ini1{
+            margin-top: 30px;
+            width: 500px;
+        }
+        #img-ini2{
+            width: 550px;
+        }
+            #card-ini1, #card-ini2, #card-ini3, #card-ini4{
+                width: 210px;
             }
+    #vidMuestra {
+        width: 350px;
+        height: 190px;
+    }
+    .video-index{
+        & .video-index__titulo{
+            & h2{
+                font-size: 20px;
+            }
+        }
+    }
     /* FIN DE INICIO */
 
     /* NOSOTROS */
@@ -532,128 +760,44 @@ ul {
 
     #barra-buscar{
         width: 400px;
+        &:focus{
+            width: 430px;
+        }
     }
     /* FOOTER */
     /* FIN DE FOOTER */
 
     /* INICIO */
     #titulo-inicio{
-        position: relative;
-        color: black;
-        font-family: $sans-serif;
-        font-weight: bold;
-        margin: 100px 0px 0px 30px;
+        font-size: 40px;
+        top: 60px;
+        left: 110px;
     }
     .rotar-palabra{
-        display: inline;
         margin-left: 130px;
     }
-    .span-palabra1, .span-palabra2, .span-palabra3{
-        width: max-content;
-        color: white;
-        position: absolute;
-        background-color: $color-prim;
-        padding-inline: 10px;
-        opacity: 0;
-        transform-origin: 10% 75%;
-    }
-    .span-palabra1{
-        animation: rotarP 12s 0s linear infinite;
-    }
-    .span-palabra2{
-        animation: rotarP 12s 4s linear infinite;
-    }
-    .span-palabra3{
-        animation: rotarP 12s 8s linear infinite;
-    }
-    @keyframes rotarP{
-        5%{
-            opacity: 1;
-        }
-        10%,
-        20%{
-            opacity: 1;
-            transform: rotate(3deg);
-        }
-        15%{
-            transform: rotate(-1deg);
-        }
-        25%{
-            opacity: 0;
-            transform: translateY(90px)
-            rotate(10deg);
-        }
-    }
     .subtitulo-ini{
-        font-family:'Lucida Sans';
-        text-align: center;
-    }
-    .subtitulo-card{
-        background-color: $color-secun;
-        border-radius: 10px;
-        box-shadow: 12px 12px 15px
-        rgba(1, 1, 1, 0.1);
-    }
-    #main-inicio{
-        display: grid;
-        grid-template-areas: 
-            "titulo titulo titulo titulo"
-            "img1 img1 img1 img1"
-            "cards cards cards cards"
-            "img2 img2 img2 vid-p";
-    }
-    #tit-ini{
-        grid-area: titulo;
-        justify-self: start;
+        font-size: 24px;
     }
         #img-ini1{
-            grid-area: img1;
-            justify-self: end;
+            width: 650px;
         }
         #img-ini2{
-            grid-area: img2;
             width: 700px;
-            justify-self: start;
-        }
-        #cardsI{
-            grid-area: cards;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
         }
             #card-ini1, #card-ini2, #card-ini3, #card-ini4{
-                width: 300px;
-                margin: 0px 0px 20px 10px;
+                width: 250px;
             }
-    
-    .video-index{
-        grid-area: vid-p;
-        align-self: center;
-        display: grid;
-        grid-template-columns: 1;
-        grid-template-rows: 2
-    }
-
-
     #vidMuestra {
         width: 400px;
         height: 220px;
     }
     .video-index{
         & .video-index__titulo{
-            width: fit-content;
-            justify-self: center;
             & h2{
-                color: black;
-                font-family: $sans-serif;
-                font-size: 26px;
-                font-weight: bolder;
+                font-size: 24px;
             }
-        }   
-    }
-    .video-index__vid{
-        width:fit-content;
-        justify-self: center;
+        }
     }
     /* FIN DE INICIO */
 
@@ -682,7 +826,7 @@ ul {
     
     /* CONTACTO */
     .form-control, .form-select{
-        width: 80%;
+        width: 100%;
     }
     /* FIN DE CONTACTO */
 }
