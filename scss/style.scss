@@ -6,6 +6,27 @@
     padding: 0;
 }
 /* Generales */
+/* MAPS-MIXINS */
+$mapProd: (
+    colorBack: #fdd9cd,
+    colorFont: #000,
+    borde: 1px solid #fdd9cd,
+);
+$mover: (
+    arriba: translateY(5px),
+    abajo: translateY(-5px)
+);
+@mixin flex-center{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@mixin dos_dos{
+    width: 200px;
+    height: 200px;
+}
+/* FIN MAPS-MIXINS */
 /* Scrollbar */
 :root {
     scrollbar-color: #7f7f7f #fff;
@@ -27,18 +48,18 @@ footer {
     background-image: linear-gradient(#131313 , #000);
 }
 
-p {
-    color: black;
-    font-size: 12px;
-    font-family: $sans-serif;
-    font-weight:lighter;
-
-}
 ul {
     color: black;
     font-family: $sans-serif;    
     font-weight: normal;
 }
+p {
+    @extend ul ;
+    font-size: 12px;
+    font-weight:lighter;
+
+}
+
 #nav-bar{
     background-color: transparent;
 }
@@ -255,10 +276,7 @@ ul {
             justify-self: start;
         }
         #cardsI{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
+            @include flex-center;
             column-gap: 10px;
             row-gap: 10px;
             margin-bottom: 20px;
@@ -302,25 +320,26 @@ ul {
             justify-self: center;
         }  
     }
+
     @keyframes proyectoMover {
         0%{
-            transform:translateY(-5px);
+            transform:map-get($mover, abajo);
         }
         50%{
-            transform: translateY(5px);
+            transform: map-get($mover, arriba);
         }
         100%{
-            transform: translateY(5px);
+            transform: map-get($mover, arriba);
         }
         50%{
-            transform: translateY(-5px);
+            transform: map-get($mover, abajo);
         }
         0%{
-            transform: translateY(5px);
+            transform: map-get($mover, arriba);
         }
     }
     /* FIN DE INICIO */
-
+    
     /* NOSOTROS */
     .parraf-nos{
         font-family: $sans-serif;
@@ -343,8 +362,7 @@ ul {
         margin-bottom: 10px;
     }
     .card-img-top {
-        width: 200px;
-        height: 200px;
+        @include dos_dos;
         align-self: center;
     }
     .button_prod{
@@ -353,9 +371,9 @@ ul {
         font-weight: 500;
         border-radius: 20px;
         padding: 8px;
-        border: 1px solid #fdd9cd;
-        background-color: #fdd9cd;
-        color: black;
+        border: map-get($mapProd, borde);
+        background-color: map-get($mapProd, colorBack);
+        color: map-get($mapProd, colorFont);
     }
     .card-text{
         font-family: $sans-serif;
@@ -452,11 +470,10 @@ ul {
         } 
     }
     /* FIN DE INICIO */
-
+    
     /* NOSOTROS */
     .img-nos{
-        width: 200px;
-        height: 200px;
+        @include dos_dos;
         margin: 20px 20px 20px 20px;
     }
     /* FIN DE NOSOTROS */
@@ -470,8 +487,7 @@ ul {
     
     /* TERMINOS */
     .img-terminos{
-        width: 200px;
-        height: 200px;
+        @include dos_dos;
         margin:  20px 80px 20px 0px;
     }
     /* FIN DE TERMINOS */
@@ -508,13 +524,7 @@ ul {
     #proyectoAbajo1{
         font-size: 20px;
     }
-    .footer__trabajo--text {
-        font-size: 18px;
-        transition: all 0.5s;
-            &:hover {
-                font-size: 20px;
-            }
-    }  
+    
     .redes {
         font-size: 18px;
         font-weight: bold;
@@ -594,8 +604,7 @@ ul {
         margin:  0px 10px 0px 100px;
     }
     .img-terminos{
-        width: 200px;
-        height: 200px;
+        @include dos_dos;
         margin:  20px 80px 20px 0px;
     }
     /* FIN DE TERMINOS */
@@ -651,14 +660,16 @@ ul {
         font-size: 20px;
     }
     
+    
     .footer__trabajo--text {
         font-size: 18px;
-        position: relative;
-        transition: all 0.5s;
+        align-items: center;
+        transition: all 0.4s;
             &:hover {
-                font-size: 20px;
-                color: white;
+                color: #fd5f2f;
+                font-size: 19px;
             }
+        
     }
     
     .redes, .redes2{
@@ -739,8 +750,7 @@ ul {
         margin:  0px 10px 0px 100px;
     }
     .img-terminos{
-        width: 200px;
-        height: 200px;
+        @include dos_dos;
         margin:  20px 80px 20px 0px;
     }
     /* FIN DE TERMINOS */

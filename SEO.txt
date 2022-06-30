@@ -1,0 +1,7 @@
+- Agregue <meta keywords> en el head de todos los html.
+-Cambie los <title> de todos los html.
+-Agregue <meta description>
+-Agregue <meta author>
+-Agregue <meta copy>
+-Agregue los <meta property>
+-Renombre las imagenes con nombres extensos
