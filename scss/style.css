@@ -8,12 +8,13 @@
 /* FIN MAPS-MIXINS */
 /* Scrollbar */
 :root {
-  scrollbar-color: #7f7f7f #fff;
+  scrollbar-color: #7f7f7f;
   scrollbar-width: thin;
 }
 
 :root::-webkit-scrollbar {
   -webkit-appearance: none;
+  width: 14px;
 }
 
 :root::-webkit-scrollbar-thumb {
@@ -23,7 +24,7 @@
 }
 
 :root::-webkit-scrollbar-track {
-  border-radius: 10px;
+  border-radius: 1px;
 }
 
 /* Fin de Scrollbar */
@@ -701,6 +702,14 @@ p {
       -webkit-transform: rotate(10deg);
               transform: rotate(10deg);
     }
+  }
+  .card {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .card:hover {
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+            box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
   }
   .btn-outline-dark {
     -webkit-transition: all 0.5s;

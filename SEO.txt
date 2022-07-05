@@ -5,3 +5,4 @@
 -Agregue <meta copy>
 -Agregue los <meta property>
 -Renombre las imagenes con nombres extensos
+-Genere los favicons

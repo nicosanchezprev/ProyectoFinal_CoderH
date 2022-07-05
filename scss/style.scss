@@ -29,11 +29,12 @@ $mover: (
 /* FIN MAPS-MIXINS */
 /* Scrollbar */
 :root {
-    scrollbar-color: #7f7f7f #fff;
+    scrollbar-color: #7f7f7f;
     scrollbar-width: thin;
 }
 :root::-webkit-scrollbar {
     -webkit-appearance: none;
+    width: 14px;
 }
 :root::-webkit-scrollbar-thumb {
     background-color: #5a5a5a;
@@ -41,7 +42,7 @@ $mover: (
     border-radius: 20px;
 }
 :root::-webkit-scrollbar-track {
-    border-radius: 10px;
+    border-radius: 1px;
 }
 /* Fin de Scrollbar */
 footer {
@@ -98,7 +99,7 @@ p {
         }
 }
 .card {
-    box-shadow: 0.5px 0.5px 3px 0.3px rgba(0, 0, 0, 0.2);;
+    box-shadow: 0.5px 0.5px 3px 0.3px rgba(0, 0, 0, 0.2);
 }
 
 /* GRID-INICIO */
@@ -633,6 +634,12 @@ p {
                 25%{transform: rotate(-10deg)}
                 25%{transform: rotate(10deg)};
             }
+    }
+    .card{
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+        }
     }
     .btn-outline-dark{    
         transition: all 0.5s;
