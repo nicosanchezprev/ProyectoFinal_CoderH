@@ -85,17 +85,18 @@ p {
 }
 .btn-light{
     border-radius: 20px;
-    transition: all 0.3s;
+    border-color: white;
+    transition: all 0.4s ease;
     font-weight: bold;
     box-shadow: 0px 8px 15px
         rgba(0, 0, 0, 0.1);
         &:hover{
             background: $color-prim;
-            border: $color-prim;
-            transform:translateY(-7px);
-            color: #fff;
+            border-color: $color-prim;
+            color: white;
+            transform:translateY(-5px);
             box-shadow: 0px 10px 25px
-                #eb582c;
+            #eb582c;
         }
 }
 .card {
@@ -146,10 +147,20 @@ p {
     #fondo-color1, #fondo-color2{
         background-color: $color-secun;
     }
+    .svg-nav{
+        width: 25px;
+        justify-self: center;
+    }
     .nav-link{
         font-family: $sans-serif;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 600;
+    }
+    .nav-link__off{
+        opacity: 0.5;
+        &:hover{
+            opacity: 1;
+        }
     }
     #barra-buscar{
         width: 90px;
@@ -158,9 +169,8 @@ p {
         }
     }
     /* FOOTER */
-    #proyectoAbajo1{
-        font-size: 14px;
-        color: white;
+    #footer_nos{
+        margin-top: 10px;
     }
     .footer__trabajo {
         text-align: center;
@@ -174,14 +184,26 @@ p {
         font-weight: bold;
         text-decoration: none;
         border-style: outset;
-        padding-left: 5px;
-        padding-right: 5px;
+        border-radius: 10px;
+        padding: 6px;
+        &:hover{
+            color: $color-secun;
+        }
     }
     .redes, .redes2 {
         color: $color-prim;
         font-family: $sans-serif;
         font-size: 10px;
         text-align: right;
+    }
+    .link-redes{
+        text-decoration: none;
+        color: $color-prim;
+        font-family: $sans-serif;
+        transition: all 0.5s ease;
+        &:hover{
+            color: $color-secun;
+        }
     }
     #ig {
         width: 20px;
@@ -190,6 +212,18 @@ p {
     #facebook {
         width: 20px;
         height: 20px;
+    }
+    footer{
+        padding-top: 10px;
+    }
+    #whatsapp{
+        position: fixed;
+        left: 10px;
+        bottom: 10px;
+        & img{
+            width: 40px;
+            height: auto;
+        }
     }
     /* FIN DE FOOTER */
 
@@ -350,12 +384,19 @@ p {
         text-align: center;
         margin: 20px 20px 20px 20px;
     }
+    .container-img-nos{
+        @include flex-center;
+        column-gap: 10px;
+        row-gap: 10px;
+    }
     .img-nos{
         width: 120px;
         height: 120px;
-        margin: 10px 10px 10px 10px;
-        transition: all 0.5s;
     }
+    #footer_nos{
+        margin-top: 10px;
+    }
+
     /* FIN DE NOSOTROS */
 
     /* PRODUCTOS */
@@ -363,26 +404,30 @@ p {
         margin-bottom: 10px;
     }
     .card-img-top {
-        @include dos_dos;
+        width: 100px;
         align-self: center;
     }
     .button_prod{
         font-family: $sans-serif;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 500;
         border-radius: 20px;
-        padding: 8px;
+        padding: 4px;
         border: map-get($mapProd, borde);
         background-color: map-get($mapProd, colorBack);
         color: map-get($mapProd, colorFont);
     }
     .card-text{
         font-family: $sans-serif;
-        font-size: 16px;
+        font-size: 14px;
+    }
+    .card-title{
+        font-family: $sans-serif;
+        font-size: 18px;
     }
     .item__precio{
         font-family: $sans-serif;
-        font-size: 26px;
+        font-size: 18px;
         font-weight: 600;
     }
     .tipoitem {
@@ -475,7 +520,6 @@ p {
     /* NOSOTROS */
     .img-nos{
         @include dos_dos;
-        margin: 20px 20px 20px 20px;
     }
     /* FIN DE NOSOTROS */
 
@@ -542,6 +586,14 @@ p {
         width: 30px;
         height: 30px;
     }
+    footer{
+        padding-top: 20px;
+    }
+    #whatsapp{
+        & img{
+            width: 60px;
+        }
+    }
     /* FIN DE FOOTER */
 
     /* INICIO */
@@ -584,12 +636,6 @@ p {
     .img-nos{
         width: 170px;
         height: 170px;
-        margin: 5px 5px 5px 5px;
-        transition: all 0.5s;
-            &:hover{
-                width: 180px;
-                margin: 0px 0px 0px 0px;
-            }
     }
     /* FIN DE NOSOTROS */
 
@@ -648,8 +694,8 @@ p {
             }
     }
     .nav-link{
-        font-size: 22px;
-        font-weight: 650;
+        font-size: 24px;
+        font-weight: 600;
     }
     #barra-buscar{
         width: 360px;
@@ -667,15 +713,22 @@ p {
         font-size: 20px;
     }
     
-    
+    .footer__trabajo{
+        transition: all 0.4s ease;
+        &:hover{
+            transform:translateY(-5px);
+        }
+    }
     .footer__trabajo--text {
         font-size: 18px;
         align-items: center;
-        transition: all 0.4s;
-            &:hover {
-                color: #fd5f2f;
-                font-size: 19px;
-            }
+        transition: all 0.2s ease;
+        &:hover{
+            background-color: #cf3c0f;
+            border-style: none;
+            box-shadow: 0px 2px 8px #a02e0c;
+            color: $color-secun;
+        }
         
     }
     
@@ -684,7 +737,13 @@ p {
         font-weight: bold;
         position: relative;
     }
-
+    #whatsapp{
+        transition: all 0.5s ease;
+        &:hover{
+            transform: rotate(-5deg) translate(10px);
+        }
+    }
+    
     /* FIN DE FOOTER */
 
     /* INICIO */
@@ -728,12 +787,6 @@ p {
     .img-nos{
         width: 180px;
         height: 180px;
-        margin: 5px 5px 10px 5px;
-        transition: all 0.5s;
-            &:hover{
-                width: 190px;
-                margin: 0px 0px 0px 0px;
-            }
     }
     /* FIN DE NOSOTROS */
 
@@ -743,12 +796,25 @@ p {
         height: 150px;
     }
     .button_prod{
+        font-size: 16px;
+        padding: 8px;
         transition: all 0.3s;   
             &:hover{
                 background-color: black;
                 border: 1px solid black;
                 color: white;
             }
+    }
+    .card-title{
+        font-size: 20px;
+    }
+    .card-text{
+        font-size: 16px;
+    }
+    .item__precio{
+        font-family: $sans-serif;
+        font-size: 22px;
+        font-weight: 600;
     }
     /* FIN DE PRODUCTOS */
     
@@ -822,10 +888,6 @@ p {
     .img-nos{
         width: 270px;
         height: 270px;
-        transition: all 0.5s;
-            &:hover{
-                width: 280px;
-            }
     }
     /* FIN DE NOSOTROS */
 

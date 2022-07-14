@@ -75,8 +75,9 @@ p {
 
 .btn-light {
   border-radius: 20px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  border-color: white;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   font-weight: bold;
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -84,10 +85,10 @@ p {
 
 .btn-light:hover {
   background: #FF5722;
-  border: #FF5722;
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
-  color: #fff;
+  border-color: #FF5722;
+  color: white;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
   -webkit-box-shadow: 0px 10px 25px #eb582c;
           box-shadow: 0px 10px 25px #eb582c;
 }
@@ -143,10 +144,21 @@ p {
   #fondo-color1, #fondo-color2 {
     background-color: #FFCCBC;
   }
+  .svg-nav {
+    width: 25px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
   .nav-link {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
+  }
+  .nav-link__off {
+    opacity: 0.5;
+  }
+  .nav-link__off:hover {
+    opacity: 1;
   }
   #barra-buscar {
     width: 90px;
@@ -155,9 +167,8 @@ p {
     width: 100px;
   }
   /* FOOTER */
-  #proyectoAbajo1 {
-    font-size: 14px;
-    color: white;
+  #footer_nos {
+    margin-top: 10px;
   }
   .footer__trabajo {
     text-align: center;
@@ -171,14 +182,27 @@ p {
     font-weight: bold;
     text-decoration: none;
     border-style: outset;
-    padding-left: 5px;
-    padding-right: 5px;
+    border-radius: 10px;
+    padding: 6px;
+  }
+  .footer__trabajo--text:hover {
+    color: #FFCCBC;
   }
   .redes, .redes2 {
     color: #FF5722;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: 10px;
     text-align: right;
+  }
+  .link-redes {
+    text-decoration: none;
+    color: #FF5722;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .link-redes:hover {
+    color: #FFCCBC;
   }
   #ig {
     width: 20px;
@@ -187,6 +211,18 @@ p {
   #facebook {
     width: 20px;
     height: 20px;
+  }
+  footer {
+    padding-top: 10px;
+  }
+  #whatsapp {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+  }
+  #whatsapp img {
+    width: 40px;
+    height: auto;
   }
   /* FIN DE FOOTER */
   /* INICIO */
@@ -418,12 +454,29 @@ p {
     text-align: center;
     margin: 20px 20px 20px 20px;
   }
+  .container-img-nos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 10px;
+  }
   .img-nos {
     width: 120px;
     height: 120px;
-    margin: 10px 10px 10px 10px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+  }
+  #footer_nos {
+    margin-top: 10px;
   }
   /* FIN DE NOSOTROS */
   /* PRODUCTOS */
@@ -431,29 +484,32 @@ p {
     margin-bottom: 10px;
   }
   .card-img-top {
-    width: 200px;
-    height: 200px;
+    width: 100px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
   .button_prod {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
     border-radius: 20px;
-    padding: 8px;
+    padding: 4px;
     border: 1px solid #fdd9cd;
     background-color: #fdd9cd;
     color: #000;
   }
   .card-text {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
+  }
+  .card-title {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
   }
   .item__precio {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 600;
   }
   .tipoitem {
@@ -536,7 +592,6 @@ p {
   .img-nos {
     width: 200px;
     height: 200px;
-    margin: 20px 20px 20px 20px;
   }
   /* FIN DE NOSOTROS */
   /* PRODUCTOS */
@@ -594,6 +649,12 @@ p {
     width: 30px;
     height: 30px;
   }
+  footer {
+    padding-top: 20px;
+  }
+  #whatsapp img {
+    width: 60px;
+  }
   /* FIN DE FOOTER */
   /* INICIO */
   #titulo-inicio {
@@ -626,13 +687,6 @@ p {
   .img-nos {
     width: 170px;
     height: 170px;
-    margin: 5px 5px 5px 5px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-  .img-nos:hover {
-    width: 180px;
-    margin: 0px 0px 0px 0px;
   }
   /* FIN DE NOSOTROS */
   /* PRODUCTOS */
@@ -720,8 +774,8 @@ p {
             transform: rotate(360deg) scale(0.95);
   }
   .nav-link {
-    font-size: 22px;
-    font-weight: 650;
+    font-size: 24px;
+    font-weight: 600;
   }
   #barra-buscar {
     width: 360px;
@@ -737,22 +791,41 @@ p {
   #proyectoAbajo1 {
     font-size: 20px;
   }
+  .footer__trabajo {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .footer__trabajo:hover {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
   .footer__trabajo--text {
     font-size: 18px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
   }
   .footer__trabajo--text:hover {
-    color: #fd5f2f;
-    font-size: 19px;
+    background-color: #cf3c0f;
+    border-style: none;
+    -webkit-box-shadow: 0px 2px 8px #a02e0c;
+            box-shadow: 0px 2px 8px #a02e0c;
+    color: #FFCCBC;
   }
   .redes, .redes2 {
     font-size: 18px;
     font-weight: bold;
     position: relative;
+  }
+  #whatsapp {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  #whatsapp:hover {
+    -webkit-transform: rotate(-5deg) translate(10px);
+            transform: rotate(-5deg) translate(10px);
   }
   /* FIN DE FOOTER */
   /* INICIO */
@@ -791,13 +864,6 @@ p {
   .img-nos {
     width: 180px;
     height: 180px;
-    margin: 5px 5px 10px 5px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-  .img-nos:hover {
-    width: 190px;
-    margin: 0px 0px 0px 0px;
   }
   /* FIN DE NOSOTROS */
   /* PRODUCTOS */
@@ -806,6 +872,8 @@ p {
     height: 150px;
   }
   .button_prod {
+    font-size: 16px;
+    padding: 8px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
@@ -813,6 +881,17 @@ p {
     background-color: black;
     border: 1px solid black;
     color: white;
+  }
+  .card-title {
+    font-size: 20px;
+  }
+  .card-text {
+    font-size: 16px;
+  }
+  .item__precio {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
   }
   /* FIN DE PRODUCTOS */
   /* TERMINOS */
@@ -875,11 +954,6 @@ p {
   .img-nos {
     width: 270px;
     height: 270px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
-  .img-nos:hover {
-    width: 280px;
   }
   /* FIN DE NOSOTROS */
   /* PRODUCTOS */
